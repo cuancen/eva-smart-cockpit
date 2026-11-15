@@ -19,11 +19,11 @@ EVA 把**端侧驾驶员监测（DMS）**、**语义化乘员监测（OMS）**�
 
 ## 展板 / Poster
 
-[![EVA 智能座舱 KT 板（中文）](docs/kt-board/preview_zh.jpg)](docs/kt-board/EVA_KT_Board_90x120_zh.pdf)
+[![EVA 智能座舱 KT 板（中文）](docs/kt-board/preview_zh.png)](docs/kt-board/EVA_KT_Board_90x120_zh.pdf)
 
 900 × 1200 mm 三折展板，主办方统一印刷；右栏两枚二维码分别指向**在线体验**与仓库的 **Run locally** 说明。
 
-[中文印刷版 PDF](docs/kt-board/EVA_KT_Board_90x120_zh.pdf) · [中文高清 JPG](docs/kt-board/EVA_KT_Board_90x120_zh.jpg) · [English PDF](docs/kt-board/EVA_KT_Board_90x120_en.pdf) · [English JPG](docs/kt-board/EVA_KT_Board_90x120_en.jpg) · [English poster page](README_EN.md#poster)
+[中文印刷版 PDF](docs/kt-board/EVA_KT_Board_90x120_zh.pdf) · [中文高清 PNG](docs/kt-board/EVA_KT_Board_90x120_zh.png) · [English PDF](docs/kt-board/EVA_KT_Board_90x120_en.pdf) · [English PNG](docs/kt-board/EVA_KT_Board_90x120_en.png) · [English poster page](README_EN.md#poster)
 
 ## 安全边界（重要）
 
@@ -57,6 +57,8 @@ EVA 把**端侧驾驶员监测（DMS）**、**语义化乘员监测（OMS）**�
 5. **OMS MomentTrace**：乘员风险与双信号恢复。
 
 五段共用同一套感知、同一套规则、同一套证据链，不是五段各自演示的动画。
+
+<a id="run-locally"></a>
 
 ## 快速开始
 

@@ -19,11 +19,11 @@ EVA combines **on-device driver monitoring (DMS)**, **semantic occupant monitori
 
 ## Poster
 
-[![EVA Smart Cockpit KT board (English)](docs/kt-board/preview_en.jpg)](docs/kt-board/EVA_KT_Board_90x120_en.pdf)
+[![EVA Smart Cockpit KT board (English)](docs/kt-board/preview_en.png)](docs/kt-board/EVA_KT_Board_90x120_en.pdf)
 
 900 × 1200 mm three-fold board, printed by the organizer. The two QR codes in the right column open the **live demo** and the repository's **Run locally** section.
 
-[English print PDF](docs/kt-board/EVA_KT_Board_90x120_en.pdf) · [English JPG](docs/kt-board/EVA_KT_Board_90x120_en.jpg) · [中文印刷版 PDF](docs/kt-board/EVA_KT_Board_90x120_zh.pdf) · [中文高清 JPG](docs/kt-board/EVA_KT_Board_90x120_zh.jpg) · [中文展板页](README.md#展板--poster)
+[English print PDF](docs/kt-board/EVA_KT_Board_90x120_en.pdf) · [English PNG](docs/kt-board/EVA_KT_Board_90x120_en.png) · [中文印刷版 PDF](docs/kt-board/EVA_KT_Board_90x120_zh.pdf) · [中文高清 PNG](docs/kt-board/EVA_KT_Board_90x120_zh.png) · [中文展板页](README.md#展板--poster)
 
 ## Safety boundary
 
@@ -57,6 +57,8 @@ This prototype demonstrates **L2 combined driving assistance**: lane-level steer
 5. **OMS MomentTrace** — occupant risk with dual-signal recovery.
 
 All five share one perception stack, one rule set and one evidence trail — not five separate animations.
+
+<a id="run-locally"></a>
 
 ## Quick start
 
