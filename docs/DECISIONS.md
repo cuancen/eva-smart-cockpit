@@ -189,3 +189,10 @@
 - **Reason:** The earlier proposal to add a fifth section and a component-level motion layer was rejected as too much information. Visual polish is separable from information architecture: the same copy reads as a finished product once the page has depth, hover feedback and considered type scale. Using CSS scroll-driven animations keeps the win without adding a component, a dependency, or a bundle cost, and browsers without `animation-timeline` simply render the static final state.
 
 
+
+## D-028 - Publish the KT board and make the repository homepage bilingual
+
+- **Date:** 2026-11-15
+- **Status:** Accepted
+- **Decision:** Add the finalized 900 × 1200 mm KT board to the public repository under `docs/kt-board/` — Chinese and English editions, each as a print PDF, a 4252 × 5670 JPG and a web-sized preview. Feature the native-language board at the top of both READMEs, make `README.md` the Chinese-first homepage, and mirror it in English in `README_EN.md` with a language switch on both. Application routes are unchanged: `#/board` and other retired hashes still resolve to Landing.
+- **Reason:** The board is finished, public-facing artwork, and showing it on the repository homepage makes the submission legible without opening the separate submission package. Keeping the print sources in `docs/kt-board/` also gives reviewers the exact artwork that goes to the printer. Competition-only materials, team operations and temporary files stay outside the tracked tree.

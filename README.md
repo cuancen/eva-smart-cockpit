@@ -1,93 +1,132 @@
-# EVA Smart Cockpit — Cabin Perception, Human Protection
+# EVA 智能座舱
 
-> [English project guide](README_EN.md) · G-SPark Finale 2026 · Track B: Internet Technology & Safety
->
-> **Live demo / 在线体验:** [cuancen.github.io/eva-smart-cockpit](https://cuancen.github.io/eva-smart-cockpit/)
->
-> 中国大陆访问 GitHub Pages 可能不稳定；离线演示见下方 [Run locally](#run-locally)。
+**可解释的车内安全守护智能体** · G-SPark Finale 2026 · 赛道 B：互联网科技与安全
 
-**Previous HHCC 2026 repository:** [cuancen/hhcc2026-proto-intelligent-vision](https://github.com/cuancen/hhcc2026-proto-intelligent-vision)
+**[中文](README.md) · [English](README_EN.md)**
 
-**Team staging mirror:** [b1207739631-rgb/hhcc-2026-prototype](https://github.com/b1207739631-rgb/hhcc-2026-prototype)
+[![在线体验](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C-Live%20Demo-8bcbaa)](https://cuancen.github.io/eva-smart-cockpit/)
+[![L2](https://img.shields.io/badge/%E9%A9%BE%E9%A9%B6%E8%BE%85%E5%8A%A9-L2%20%C2%B7%20driver%20responsible-ee864d)](#安全边界重要)
+[![tests](https://img.shields.io/badge/%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95-111%20passing-b4ae83)](#验证)
+[![on-device](https://img.shields.io/badge/%E4%BA%BA%E8%84%B8%E5%85%B3%E9%94%AE%E7%82%B9-478%20on--device-8bcbaa)](#功能一览)
 
-EVA is an explainable in-cabin agent that combines local driver monitoring, semantic occupant monitoring, cabin memory, cabin actuation, and L2 assistance. Its default presentation is one uninterrupted five-experience tour: **Daily Commute → Fatigue Guard → Complex Roads → Cabin Memory → OMS MomentTrace**.
+EVA 把**端侧驾驶员监测（DMS）**、**语义化乘员监测（OMS）**、座舱记忆、座舱执行和受约束的 **L2 组合驾驶辅助**合并成一条可审计的安全闭环：**感知 → 判断 → 执行 → 验证**。默认演示是一段连续的五幕体验：**日常通勤 → 疲劳守护 → 复杂路况 → 座舱记忆 → OMS MomentTrace**。
 
-## Safety positioning
+| | |
+|---|---|
+| **在线体验** | [cuancen.github.io/eva-smart-cockpit](https://cuancen.github.io/eva-smart-cockpit/)（中国大陆访问可能不稳定，可按下文本地运行） |
+| **展板** | 900 × 1200 mm 三折 KT 板，见下方 [展板](#展板--poster) |
+| **技术栈** | Vite + React 18 + TypeScript + Three.js + MediaPipe Face Landmarker |
 
-This prototype demonstrates **L2 combined driving assistance**: lane-level steering and acceleration support with continuous driver supervision. The driver remains responsible at all times and must be ready to take over. EVA is limited to monitoring, alerts, recommendations, cabin adjustments, and safe assistance degradation; this project does not claim L3/L4 autonomy.
+## 展板 / Poster
 
-## Current verified checkpoint
+[![EVA 智能座舱 KT 板（中文）](docs/kt-board/preview_zh.jpg)](docs/kt-board/EVA_KT_Board_90x120_zh.pdf)
 
-- Full-screen Three.js vehicle digital twin with calibrated left-hand-drive occupants, vehicle-anchored road motion, scene-specific cameras, event-driven rendering, and WebGL fallback.
-- Browser-local MediaPipe DMS from the authorized built-in fatigue video, an explicitly selected live camera, or a user-uploaded local video: EAR, PERCLOS, head pose, eyes-off-road, presence, and six-state emotion classification.
-- Simulated semantic OMS with 23 test states, seat-aware risk rules, a guarded L2 response, dual-sensor recovery, and one explainable MomentTrace artifact.
-- Workload and vision fatigue fusion with care and urgent thresholds.
-- Audio-led Full Demo with 21 stable beats and about 103 seconds of approved English digital-human recordings; language changes preserve the current beat.
-- Human-first Evidence summary by default; its on-demand technical detail view retains the three-column perception, reasoning, and execution workbench.
-- Local-video upload replaces the old simulation button. The Full Demo starts its Fatigue Guard segment with the authorized built-in video and local inference; it never requests camera access by itself.
-- Chinese-first bilingual landing and cockpit UI, selected from browser language and persisted as `eva.lang`; English remains available from both language switches.
-- Landing hero is the rotating 3D vehicle on the brand orange→teal palette: 28-second auto-spin, horizontal drag-to-rotate, reduced-motion still frame, and an EVA status fallback when WebGL or the GLB fails.
-- Chinese EVA subtitles use browser `zh-CN` speech synthesis. English mode retains the approved MP3 pack and its original timing; no Chinese cloned voice is generated.
-- Keyboard control, high contrast, scalable text, reduced-motion support, explicit sensor fallbacks, and source-labelled DMS/OMS boundaries.
-- Graphite/deep-blue environment grading, semantic cutaway material profiles, speed-linked rain and fog, and a larger procedural lead SUV with visible brake lamps keep the vehicle and simulated world visually coherent.
-- 111 automated regression tests plus browser compatibility checks for routing, audio codecs, restart cancellation, WebGL/model failure, reduced motion, and desktop/mobile layouts.
+900 × 1200 mm 三折展板，主办方统一印刷；右栏两枚二维码分别指向**在线体验**与仓库的 **Run locally** 说明。
 
-## Run locally
+[中文印刷版 PDF](docs/kt-board/EVA_KT_Board_90x120_zh.pdf) · [中文高清 JPG](docs/kt-board/EVA_KT_Board_90x120_zh.jpg) · [English PDF](docs/kt-board/EVA_KT_Board_90x120_en.pdf) · [English JPG](docs/kt-board/EVA_KT_Board_90x120_en.jpg) · [English poster page](README_EN.md#poster)
 
-Requirements: Node.js 20.19+ (or 22.12+) and a modern browser.
+## 安全边界（重要）
+
+本项目演示的是 **L2 组合驾驶辅助**：车道级转向与加减速辅助，驾驶员需要持续监督。**驾驶员始终是责任主体**，必须随时准备接管。EVA 只做监测、提醒、建议、座舱调节和辅助降级，不宣称 L3/L4，也不做自动驾驶承诺。
+
+- **DMS** 使用授权视频 / 本地视频，推理在浏览器本机完成，影像不上传。
+- **OMS** 是**模拟语义事件**，界面已明确标注，不暗示真实后排传感器。
+- 车速、疲劳速率、温度等为集中管理的**模拟参数**（`src/core/params.ts`），不是量产标定。
+
+## 功能一览
+
+| 模块 | 作用 |
+|---|---|
+| 视觉 DMS | 授权内置视频、用户主动选择的摄像头或本地视频 → MediaPipe Face Landmarker（478 点，端侧 WASM/GPU 推理，零上传）→ EAR / 眨眼率 / PERCLOS / 头部姿态 / 驾驶员在场 |
+| 语义 OMS | 23 种模拟、座位感知的乘员状态，带置信度、持续时间和失效数据规则；主演示使用后排车窗风险，从不把 OMS 说成真实传感器 |
+| 双源疲劳融合 | 工况疲劳（车速 / 路况 / 时长）与视觉 PERCLOS **取强融合**；≥60 关怀，≥85 紧急干预并给出休息选项 |
+| 分心守护 | 视线离开 ≥2 秒提醒，≥4 秒紧急告警 + L2 降级（降低目标车速、拉大跟车时距）；注意力回正后自动恢复 |
+| EVA 智能体 | 电影感旁白与自然语言控制：温度、音乐、按摩、导航、休息与 L2 辅助 |
+| 复杂路况协同 | 雨夜 + 拥堵系数 ≥2 时限制娱乐、进入谨慎模式，路况缓解后自动恢复 |
+| 数字孪生舞台 | 全屏 Three.js 整车舞台：石墨 / 深蓝环境分级、语义剖切材质、随车锚定的道路与城市、速度联动雨雾、带刹车灯的前车与分场景机位 |
+| 可解释证据 | 默认人性化 Evidence 摘要，可展开三列“感知 / 推理 / 执行”工作台，完整键盘可达 |
+| 五段体验 | 音频驱动的 21 拍连续演示，约 103 秒；每一段也可单独运行 |
+| 双语首页 | 中文优先的中英双语编辑式首页，含可切换的座舱截图、五段入口和明确的 DMS/OMS/L2 边界 |
+
+## 五段体验
+
+1. **日常通勤**：座舱偏好与常用路线自动就绪。
+2. **疲劳守护**：端侧 DMS，60 / 85 分级干预。
+3. **复杂路况**：雨夜拥堵，舱驾协同降速。
+4. **座舱记忆**：视线关联的位置记忆与验证。
+5. **OMS MomentTrace**：乘员风险与双信号恢复。
+
+五段共用同一套感知、同一套规则、同一套证据链，不是五段各自演示的动画。
+
+## 快速开始
+
+需要 Node.js 20.19+（或 22.12+）与现代浏览器。
 
 ```bash
-npm install
-npm run dev
+npm install     # postinstall 会把 MediaPipe WASM 复制到 public/（自托管，可离线）
+npm run dev     # http://localhost:5173
+npm test        # 111 项回归测试
+npm run build   # 类型检查 + 生产构建
 ```
 
-Open `http://localhost:5173`; `/` and `#/landing` show the introduction page. Choose the full tour there, or open `#/cockpit` for manual control. Unknown hashes return to the introduction page.
+`/` 与 `#/landing` 打开首页；点击 **Run Full Demo** 可完整播放五段体验；直接访问 `#/cockpit` 会停在 **Start Experience**。未知 hash 一律回到首页，`#/board` 等已退役路由同样回到首页。
 
-```bash
-npm test
-npm run build
-```
+## 演示操作
 
-`npm install` runs `scripts/copy-wasm.mjs`, copying the MediaPipe WASM runtime into `public/mediapipe-wasm/` for local serving. That generated directory and `dist/` are intentionally not committed.
+- `Space`：开始 / 暂停 / 继续。
+- `D`：重播当前体验或完整演示。
+- `1` / `2` / `3`：日常通勤、疲劳守护、复杂路况。
+- `L`：切换 L2 辅助。
+- `Evidence`：查看 DMS/OMS 来源、推理依据、执行动作与驾驶员责任说明。
 
-## Demo controls
+完整演示不会主动请求摄像头：疲劳守护段使用授权预录视频 `public/dms/d_360.mp4` 在本机推理；若本地推理失败，视频继续播放，不可用指标显示 `—` 而不是编造数值。**Live DMS** 与 **Upload Video** 是需要用户主动选择的证据输入，同样不上传。
 
-- `Space`: start, pause, or continue.
-- `D`: replay the selected experience or automatic Full Demo.
-- `1`, `2`, `3`: City Commute, Fatigue Guard, or Complex Roads.
-- `L`: toggle L2 assistance.
-- `Evidence`: inspect DMS/OMS sources, reasoning, actions, and driver responsibility.
+英文模式使用 `public/audio/eva/en-US/` 的授权 MP3；中文模式使用浏览器 `zh-CN` 语音合成，不加载英文 MP3，也不生成中文克隆音色。切换语言不会打断当前节拍。
 
-The Full Demo does not request camera permission. Its Fatigue Guard segment uses the authorized prerecorded `public/dms/d_360.mp4` and runs MediaPipe locally in the browser; the same real frame and derived metrics appear in the stage preview and Evidence. If local inference fails, the video remains visible while unavailable metrics show `—` rather than fabricated values. `Live DMS` and `Upload Video` remain optional, explicitly selected evidence inputs and are not uploaded. OMS semantic events and the driving environment remain visibly identified simulations.
-
-The five-scene tour is paced by 21 stable EVA `voice_id` values. English mode uses the approved MP3 assets in `public/audio/eva/en-US/`; Chinese mode does not load those recordings and instead uses browser `zh-CN` speech for the Chinese subtitles. Changing language cancels the previous speech source and continues the same beat. If browser speech is unavailable or fails, narration callbacks and the bounded timing fallback keep the demo moving. Replay hard-stops active media before starting again. No Chinese cloned voice is used.
-
-Returning to Landing unmounts the cockpit and stops its demo, DMS inputs, and narration. Starting a tour from Landing again creates a fresh cockpit; changing language keeps the current cockpit mounted.
-
-## Print-only KT board
-
-The KT board stays separate from the application: `#/board` and other retired hashes resolve to Landing. The requested V2 release paths would be `docs/kt-board-v2.html` and `docs/kt-board-v2.pdf`; neither file is included in this repository. The existing 900 × 1200 mm print materials are kept in the team's submission package, not in this code repository, and this UI change does not regenerate or replace them.
-
-## Architecture
+## 架构
 
 ```text
-src/core/      DOM-free simulation, EVA rules, parameters, and L2 policy
-src/vision/    MediaPipe DMS, pure metrics, and simulated fallback
-src/landing/   Chinese-first bilingual editorial landing, rotating 3D hero vehicle
-src/shell/     Cockpit UI, timeline, EVA avatar, Evidence, and digital twin
-tests/         Core, vision, shell, timeline, and twin-state regression tests
-public/        Self-hosted face model, vehicle GLB, and approved EVA assets
-docs/          Pipeline, decisions, features, and project guidance
+src/core/     DOM 无关的仿真、EVA 规则、参数与 L2 策略
+src/vision/   MediaPipe DMS、纯函数指标与模拟回退信号
+src/shell/    座舱 UI、可暂停时间线、Evidence 与数字孪生舞台
+src/landing/  中文优先的中英双语首页与 3D 车辆 Hero
+tests/        Core、vision、OMS、时间线、音频与交互回归测试
+public/       自托管的人脸模型、车辆 GLB 与授权的 EVA 素材
+docs/         Pipeline、决策记录、功能说明与 KT 展板
 ```
 
-The simulation clock advances only while the experience is running. Ready, paused, Evidence-open, and completed states freeze simulation. The high-poly vehicle renders at a capped rate only while motion is required. If WebGL or the GLB cannot load, the story, evidence, audio, and controls continue through the EVA fallback state.
+仿真时钟只在体验 `running` 时前进；Ready、暂停、Evidence 展开和完成状态都会冻结。高面数车辆只在需要运动时按上限渲染。WebGL 或 GLB 加载失败时，故事、证据、音频和控制仍可通过 EVA 状态回退继续。
 
-## Competition records
+## 可靠性与降级
 
-- [Decision log](docs/DECISIONS.md)
-- [AI usage disclosure](AI_USAGE.md)
-- [Third-party notices](THIRD_PARTY_NOTICES.md)
-- [Pipeline and parameters](docs/PIPELINE.md)
-- [Project guide](PROJECT_GUIDE_EN.md)
+- 视觉模型与 WASM 运行时自托管，本地优先、多源回退（本地 → jsDelivr → unpkg；GPU → CPU）。
+- 摄像头拒绝、模型失败、WebGL 失败、音频不可用都不会阻塞演示。
+- 重播会硬停止仍在播放的媒体，再从头开始。
+- 返回首页会卸载座舱并停止演示、DMS 输入与旁白。
 
-The public history preserves the official-period implementation commits instead of flattening them into a single source dump. No credentials, personal data, dependency directories, generated builds, or research-workspace artifacts belong in this repository.
+## 验证
+
+```bash
+npm test      # 5 个测试文件，111 项全部通过
+npm run build # tsc --noEmit + vite build
+```
+
+## 竞赛资料
+
+- [决策记录](docs/DECISIONS.md)
+- [AI 使用声明](AI_USAGE.md)
+- [第三方声明](THIRD_PARTY_NOTICES.md)
+- [管线与参数表](docs/PIPELINE.md)
+- [项目指南（英文）](PROJECT_GUIDE_EN.md)
+
+## 相关仓库
+
+- **上一届 HHCC 2026 仓库**：[cuancen/hhcc2026-proto-intelligent-vision](https://github.com/cuancen/hhcc2026-proto-intelligent-vision)
+- **团队暂存镜像**：[b1207739631-rgb/hhcc-2026-prototype](https://github.com/b1207739631-rgb/hhcc-2026-prototype)
+
+## 声明
+
+- 演示中的速度、疲劳速率、温度等均为**模拟假设**，集中定义在 `src/core/params.ts`，不是量产标定。
+- MediaPipe Face Landmarker 模型与运行时为 Apache-2.0，自托管。
+- 车辆模型为社区作者 *crivero* 的 Sketchfab 作品（CC-BY，署名见 `AI_USAGE.md` 与页面页脚），**不是吉利官方素材**；材质在运行时渲染为石墨金属。
+- 本仓库不包含凭据、个人数据、依赖目录、构建产物或研究工作区文件。

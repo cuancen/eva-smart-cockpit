@@ -19,7 +19,7 @@ src/shell/    React cockpit, pausable three-act timeline, evidence, and twin sta
 src/landing/  Chinese-first bilingual landing page with cockpit screenshots
 tests/        Core, vision, timeline, expression, and twin-state regression tests
 public/       Self-hosted model assets; generated MediaPipe WASM is not committed
-docs/         Pipeline, decisions, feature guide, provenance, and project guidance
+docs/         Pipeline, decisions, feature guide, provenance, project guidance, and the KT board
 ```
 
 ## Verification
