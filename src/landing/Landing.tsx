@@ -112,9 +112,9 @@ export default function Landing({ language, onLanguageChange }: LandingProps) {
               <span className="la-kicker__track">FIELD NOTE 01 · 2026</span>
             </span>
             <h1 className="la-title">
-              <span>{isZh ? '感知座舱，' : 'Cabin perception,'}</span>
+              <em>{isZh ? '感知座舱，' : 'Cabin perception,'}</em>
               <br />
-              <em>{isZh ? '守护每一程。' : 'human protection.'}</em>
+              {isZh ? '守护每一程。' : 'human protection.'}
             </h1>
             <span className="la-title-en">LOCAL EVIDENCE / EXPLAINABLE ASSISTANCE / HUMAN IN CONTROL</span>
             <p className="la-slogan">

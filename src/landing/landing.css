@@ -916,22 +916,22 @@ body.landing-body { background: var(--la-bg); }
   border-top-color: rgba(255, 255, 255, 0.08);
 }
 
-/* 标题字体与渐变对齐上一版（5175）：只影响 .la-title，其余样式不动。 */
+/* 标题字体与渐变对齐旧版 orgin：只影响 .la-title，其余样式不动。 */
 .la-title {
+  margin: 0 0 18px;
   font-size: clamp(2.3rem, 5.2vw, 3.9rem);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.015em;
+  color: #fff;
+  text-shadow: none;
 }
-.la-title > span {
+.la-title em {
+  display: inline;
+  font-style: normal;
+  white-space: normal;
   background-image: linear-gradient(100deg, var(--la-warm), var(--la-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-.la-title em {
-  background-image: none;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  color: #fff;
 }
