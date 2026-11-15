@@ -2,6 +2,16 @@
 
 本项目遵循 [Conventional Commits](https://www.conventionalcommits.org/)，提交历史即官方开发期内的迭代证据。
 
+## 1.3.0 —— 手机端适配、Landing 层次感与仓库维护
+
+- `fix(mobile)` 竖屏 3D 相机按纵横比自动放宽 FOV；DMS、座舱响应、座舱记忆改为紧凑可滚动卡片，短横屏左右分栏，超短横屏隐藏 DMS 浮层，完整证据保留在抽屉
+- `fix(landing)` 修复证据链截图在手机上以视口为参照、浮到首屏的定位上下文问题；收窄手机端首屏留白与标题比例
+- `style(landing)` 首屏加入暖中心/青色边缘光池，证据、演示、数据、关于四个区块使用不同明暗与色温；标题第二行提高品牌青色占比
+- `fix(build)` 初始 HTML 语言改为 `zh-CN`；Pages 构建关闭 sourcemap；Vite 升级到 8.3.8，开发依赖漏洞清零
+- `chore(ci)` GitHub Actions 升级为 checkout@v7、setup-node@v7、configure-pages@v6、upload-pages-artifact@v5、deploy-pages@v5
+- `docs` KT 展板改为 PNG 导出并补 `#run-locally` 锚点；同步 AI 使用日志与声明
+- `test` 111 项回归全绿
+
 ## 1.2.0 —— 星火杯：双语界面、路由收敛与提交材料对齐
 
 - `feat(i18n)` 界面改为中文优先并持久化语言选择；中文字幕使用浏览器 `zh-CN` 语音合成，英文继续使用已审核的 MP3 语音包，不新增中文克隆语音

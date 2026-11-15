@@ -16,7 +16,8 @@ export default defineConfig({
     // 让文件监听忽略它们，避免 dev server 因 EBUSY 崩溃。
     watch: { ignored: ['**/*.tmpdir/**', '**/*.tmp'] },
   },
-  build: { sourcemap: true },
+  // 本地保留 sourcemap 方便调试；GitHub Pages 产物不携带 .map，减少部署体积。
+  build: { sourcemap: !process.env.GITHUB_ACTIONS },
   test: {
     environment: 'node',
     include: ['tests/**/*.test.ts'],

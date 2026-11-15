@@ -37,9 +37,9 @@
 **赛后迭代（2026-11-13 起，面向星火杯）**
 
 - 路由与中文化收敛、界面双语持久化、证据页三列展示、Landing 视觉打磨；
-- 回归测试增至 111 项（新增路由 11 项与中文运行时文案 1 项），验证本次改动未破坏既有行为；
-- 仅涉及展示层与本地化，`src/core/` 的内核行为、安全阈值与规则未改变；
-- 该次迭代已如实记录于 `AI_USAGE.md`（2026-11-13 条目）。
+- 2026-11-15：手机端适配（竖屏取景、紧凑证据卡片、短横屏布局）、Landing 明暗层次、GitHub Pages 部署、KT 展板 PNG 更新与仓库维护；
+- 回归测试增至 111 项并保持全绿；仅涉及展示层、本地化与部署，`src/core/` 的内核行为、安全阈值与规则未改变；
+- 上述迭代已如实记录于 `AI_USAGE.md`（2026-11-13 与 2026-11-15 条目）。
 
 ### 四、团队完成的内容
 
@@ -109,9 +109,9 @@
 **Post-event iteration (from 2026-11-13, for the Spark Cup)**
 
 - Route and Chinese-localization convergence, persisted bilingual UI, the three-column Evidence view, and Landing visual polish;
-- Regression tests increased to 111 (11 routing tests and 1 Chinese runtime-copy test), verifying that the changes did not break existing behavior;
-- These changes touch only the presentation layer and localization. Kernel behavior, safety thresholds, and rules in `src/core/` are unchanged;
-- This iteration is recorded truthfully in `AI_USAGE.md` (entry dated 2026-11-13).
+- 2026-11-15: phone adaptation (portrait framing, compact evidence cards, short-landscape layout), Landing hierarchy, GitHub Pages deployment, KT board PNG update, and repository maintenance;
+- Regression tests increased to 111 and remain green; only the presentation layer, localization, and deployment changed. Kernel behavior, safety thresholds, and rules in `src/core/` are unchanged;
+- These iterations are recorded truthfully in `AI_USAGE.md` (entries dated 2026-11-13 and 2026-11-15).
 
 ### 4. Work Completed by the Team
 

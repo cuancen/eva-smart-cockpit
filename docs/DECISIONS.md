@@ -196,3 +196,17 @@
 - **Status:** Accepted
 - **Decision:** Add the finalized 900 × 1200 mm KT board to the public repository under `docs/kt-board/` — Chinese and English editions, each as a print PDF, a 4252 × 5670 PNG and a web-sized PNG preview. Feature the native-language board at the top of both READMEs, make `README.md` the Chinese-first homepage, and mirror it in English in `README_EN.md` with a language switch on both. The board's repository QR code targets `#run-locally`, which both READMEs expose as an explicit anchor. Application routes are unchanged: `#/board` and other retired hashes still resolve to Landing.
 - **Reason:** The board is finished, public-facing artwork, and showing it on the repository homepage makes the submission legible without opening the separate submission package. Keeping the print sources in `docs/kt-board/` also gives reviewers the exact artwork that goes to the printer. Competition-only materials, team operations and temporary files stay outside the tracked tree.
+
+## D-029 - Treat phones as a first-class demo surface
+
+- **Date:** 2026-11-15
+- **Status:** Accepted
+- **Decision:** In portrait, widen the digital-twin FOV from the camera aspect ratio so the vehicle stays inside the frame; convert the DMS, cabin-response and cabin-memory overlays into compact scrollable cards below the source labels, stack DMS under a cabin card, use side-by-side cards in short landscape, and hide the floating DMS card below 360 px height while keeping the full evidence in the drawer. Keep the landing evidence board in a positioning context on phones so its screenshot cannot detach from the board and cover the hero.
+- **Reason:** The desktop camera and floating overlays assumed a wide stage; on phones they cropped the car and produced overlapping, unreadable evidence layers. The fixes preserve the desktop composition while giving phones a legible stage and a clear evidence path.
+
+## D-030 - Raise Landing's midtones instead of brightening the whole theme
+
+- **Date:** 2026-11-15
+- **Status:** Accepted
+- **Decision:** Keep the dark brand, but add a warm-centered, cool-edged light pool behind the hero, lift the text tokens and nav surface, increase the car's rim light, and give the evidence, demonstration, data, and responsibility bands distinct tonal washes. Replace the stale `GEELY HACKATHON 2026` caption with `G-SPARK FINALE 2026`.
+- **Reason:** The earlier page put the background, car, and body copy at similar luminance, so the hero had no focal center and the lower sections read as one flat black field. A single light center plus tonal bands restores hierarchy without changing the product's dark identity or adding content.

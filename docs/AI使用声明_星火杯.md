@@ -17,7 +17,7 @@
 | 工具 | 使用阶段 | 使用场景 | 主要产出 | 团队审核方式 |
 |---|---|---|---|---|
 | ZCode（AI 编程助手，本机会话） | 原型开发期 | 在团队指令下辅助代码生成、仓库与部署管理、功能文档撰写 | 工程脚手架、部署操作、文档草稿 | 团队逐项审阅并运行验证 |
-| Claude Code（AI 编程助手，本机会话） | 原型开发期；赛前材料整理 | 在团队指令下辅助代码生成与重构、工程约定维护、双语文档与提交材料核对 | 工程约定、文档与材料更新 | 团队逐项审阅并运行验证 |
+| Claude Code（AI 编程助手，本机会话） | 原型开发期；赛前材料整理；2026-11-15 仓库维护 | 在团队指令下辅助代码生成与重构、工程约定维护、双语文档与提交材料核对、手机端适配与首页打磨 | 工程约定、文档与材料更新、移动端与首页更新 | 团队逐项审阅并运行验证 |
 | OpenAI Codex | 原型开发期；赛前迭代 | 在团队指令下辅助规则约束核验、仓库初始化、功能迭代、证据页与文档整理 | 功能实现草稿、证据页、文档 | 团队逐项审阅并运行验证 |
 | OpenAI 图像生成（经 Codex 调用） | 原型开发期 | 基于团队提供并授权的 EVA 参考图生成透明外壳素材 | `public/eva/eva-shell-v2.png` | 团队提供源图并确认最终素材 |
 | 团队选定的数字人语音工作流（经 Codex 集成） | 原型开发期 | 英文 EVA 语音包制作、语音清单与 SHA-256 校验、逐条音频 QA | 69 段已审核 MP3 与语音清单 | 团队交付最终语音包并逐条复核 |
@@ -84,7 +84,7 @@
 | Tool | Phase | Scenario | Main output | Team review |
 |---|---|---|---|---|
 | ZCode (AI coding assistant, local session) | Prototype development | Assisted code generation, repository and deployment management, feature documentation under team direction | Scaffolding, deployment operations, documentation drafts | Reviewed item by item and verified by running |
-| Claude Code (AI coding assistant, local session) | Prototype development; pre-event materials | Assisted code generation and refactoring, engineering conventions, bilingual documentation and submission review under team direction | Convention files, documentation and material updates | Reviewed item by item and verified by running |
+| Claude Code (AI coding assistant, local session) | Prototype development; pre-event materials; 2026-11-15 repository maintenance | Assisted code generation and refactoring, engineering conventions, bilingual documentation and submission review, phone adaptation and landing polish under team direction | Convention files, documentation and material updates, mobile and landing updates | Reviewed item by item and verified by running |
 | OpenAI Codex | Prototype development; pre-event iteration | Assisted constraint verification, repository bootstrap, feature iteration, evidence page and documentation under team direction | Feature implementation drafts, evidence page, documentation | Reviewed item by item and verified by running |
 | OpenAI image generation (via Codex) | Prototype development | Generated the transparent EVA shell from the team-provided, team-authorized reference under team direction | `public/eva/eva-shell-v2.png` | The team supplied the source and approved the final asset |
 | Team-selected digital-human voice workflow (integrated via Codex) | Prototype development | English EVA voice pack production, voice manifest and SHA-256 verification, per-file audio QA | 69 reviewed MP3 assets and voice manifests | The team delivered the final pack and reviewed each recording |

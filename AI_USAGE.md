@@ -22,6 +22,7 @@
 | 2026-08-21 – 08-23 | ZCode（AI 编程助手，本机会话） | 团队指令下的代码生成、仓库与部署管理、功能文档撰写 | 工程脚手架、仓库与部署操作、功能文档草稿 | 团队主导各次会话、审阅产出，并保留全部产品与提交决策 |
 | 2026-08-21 – 08-23；2026-11-15 | Claude Code（AI 编程助手，本机会话） | 团队指令下的代码生成与重构、工程约定维护（AGENTS.md / CLAUDE.md）、双语文档与提交材料核对 | 工程约定文件、文档更新与双语提交材料 | 团队制定工程规则并复核每一项被采纳的改动 |
 | 2026-11-15 | Claude Code | 团队指令下按 111 项测试检查点对齐双语的 AI 声明与文档 | 星火杯专用 AI 声明、双语 AI 使用日志、功能说明中的 111 项对齐、新增 1.2.0 更新日志条目；删除本机路径与仓库外链接 | 提交前待团队确认 |
+| 2026-11-15 | Claude Code | 团队指令下完成 GitHub Pages 部署、手机端适配、Landing 层次感打磨与仓库维护 | Pages 工作流与移动端修复、KT 展板 PNG 与二维码锚点、首屏光池与区块层次、文档与 AI 日志同步 | 团队提出手机端不适配与首页偏黑的问题；本轮产出待团队复核桌面/手机截图与线上结果 |
 
 ## 团队手改与关键开发记录（提交前如实填写，不得虚构）
 
@@ -37,7 +38,7 @@
 
 | 证据 | 位置 | 用途 |
 |---|---|---|
-| 团队决策记录 | `docs/DECISIONS.md`（D-001～D-027） | 证明产品方向、架构与取舍由团队决定 |
+| 团队决策记录 | `docs/DECISIONS.md`（D-001～D-030） | 证明产品方向、架构与取舍由团队决定 |
 | 参数表与取值理由 | `docs/PIPELINE.md` §一 | 证明阈值与规则可解释 |
 | 自动化回归 | `tests/`（111 项） | 证明改动经过验证 |
 | 功能与演示说明 | `docs/功能说明.md` | 证明团队能讲清每项能力 |
@@ -79,6 +80,7 @@ This log records the **team-directed** use of AI tools, their outputs, and the t
 | 2026-08-21 – 08-23 | ZCode (AI coding assistant, local session) | Team-directed code generation, repository and deployment management, feature documentation | Project scaffolding, repository and deployment operations, and feature documentation drafts | The team directed the sessions, reviewed the outputs, and retained all product and submission decisions |
 | 2026-08-21 – 08-23; 2026-11-15 | Claude Code (AI coding assistant, local session) | Team-directed code generation and refactoring, engineering conventions (AGENTS.md / CLAUDE.md), bilingual documentation and submission review | Convention files, documentation updates, and bilingual submission documentation | The team set the engineering rules and reviewed each accepted change |
 | 2026-11-15 | Claude Code | Aligned the bilingual AI declaration and documentation to the 111-test checkpoint under team instruction | G-SPark-specific AI declaration, bilingual AI usage log, 111-test alignment in the feature guide, and a new 1.2.0 changelog entry; removed machine-local paths and out-of-repository links | Pending team confirmation before submission |
+| 2026-11-15 | Claude Code | Team-directed GitHub Pages deployment, phone adaptation, landing visual hierarchy, and repository maintenance | Pages workflow and mobile fixes, KT board PNG exports and QR anchor, hero light pool and section bands, synchronized documentation and AI log | The team reported the phone-layout and flat-homepage issues; this round awaits the team's review of desktop/phone screenshots and live results |
 
 ## Team Hand-Modification and Key-Development Record (fill truthfully before submission; do not invent)
 
@@ -94,7 +96,7 @@ This log records the **team-directed** use of AI tools, their outputs, and the t
 
 | Evidence | Location | Purpose |
 |---|---|---|
-| Team decision log | `docs/DECISIONS.md` (D-001–D-027) | Shows product direction, architecture, and trade-offs were decided by the team |
+| Team decision log | `docs/DECISIONS.md` (D-001–D-030) | Shows product direction, architecture, and trade-offs were decided by the team |
 | Parameter table and rationale | `docs/PIPELINE.md` §1 | Shows thresholds and rules are explainable |
 | Automated regression | `tests/` (111 tests) | Shows changes were verified |
 | Feature and demo guide | `docs/功能说明.md` | Shows the team can explain each capability |

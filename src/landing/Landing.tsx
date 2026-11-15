@@ -138,7 +138,7 @@ export default function Landing({ language, onLanguageChange }: LandingProps) {
             <div className="la-hud la-hud--top"><span className="la-hud-dot" /> <b>{isZh ? '本地证据链' : 'LOCAL EVIDENCE CHAIN'}</b><small>ONLINE / 01</small></div>
             <div className="la-hud la-hud--side"><small>ATTENTION INDEX</small><strong>0.94</strong><span><i /><i /><i /><i /><i /><i /></span></div>
             <p className="la-hero-visual-hint"><span>{isZh ? '拖动旋转' : 'DRAG TO ROTATE'}</span><i aria-hidden="true">·</i><span>{isZh ? '本地渲染' : 'RENDERED LOCALLY'}</span></p>
-            <div className="la-visual-caption"><span>EVA / GEELY HACKATHON 2026</span><span>{isZh ? '一刻风险，三层证据' : 'ONE MOMENT / THREE LAYERS'}</span></div>
+            <div className="la-visual-caption"><span>EVA / G-SPARK FINALE 2026</span><span>{isZh ? '一刻风险，三层证据' : 'ONE MOMENT / THREE LAYERS'}</span></div>
           </div>
           <a className="la-next" href="#evidence" onClick={(event) => scrollTo(event, 'evidence')}>
             <span>{isZh ? '查看证据链' : 'Explore the evidence chain'}</span><i aria-hidden="true">↓</i>
