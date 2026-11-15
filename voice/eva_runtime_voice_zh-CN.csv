@@ -1,0 +1,50 @@
+voice_id,scene,spoken_text,audience,tone,target_duration_sec,file_name,performance_direction,status
+rt01_oms_l2_response,OMS Runtime,"右后座乘员，请马上回到车内。驾驶员请别慌，我会平稳降速、拉开距离。请继续看好前方。",rear-right,urgent,6.0,eva_rt01_oms_l2_response_zh-CN.wav,"对象分明、短稳直接，不喊叫。",generate
+rt02_oms_manual_response,OMS Runtime,"右后座，请马上回到车内。驾驶员请在安全时减速，始终握住车辆控制。",rear-right,urgent,5.5,eva_rt02_oms_manual_response_zh-CN.wav,"先提醒乘员，再清楚交代驾驶员责任。",generate
+rt03_oms_candidate,OMS Runtime,"右后座有人正靠近车窗。请看一下那里，也别忘了前方。",driver,cautious,4.0,eva_rt03_oms_candidate_zh-CN.wav,"克制观察，不提前下结论。",generate
+rt04_oms_recovery_check,OMS Runtime,"乘员已经回到车内了。我再陪您确认，您的视线是不是也回到了前方。",driver,caring,5.0,eva_rt04_oms_recovery_check_zh-CN.wav,"先放松，再谨慎确认。",generate
+rt05_oms_confirmed,OMS Runtime,"很好，乘员已经回到车内，您也看回了前方。临时保护已经解除。",driver,confirming,4.8,eva_rt05_oms_confirmed_zh-CN.wav,"风险解除后的轻微笑意。",generate
+rt06_commute_welcome,Daily Commute,"早上好，欢迎回来。今天路况不错，还是走我们熟悉的路线。",driver,warm,4.5,eva_rt06_commute_welcome_zh-CN.wav,"熟悉自然，像每天见面的副驾。",generate
+rt07_commute_cabin,Daily Commute,"温度刚好，灯光也柔和些。放上您常听的歌，我们出发吧。",driver,warm,4.5,eva_rt07_commute_cabin_zh-CN.wav,"轻松、亲切，结尾有出发感。",generate
+rt08_commute_eta,Daily Commute,"路线已经规划好了，按当前速度预计约 {minutes} 分钟到达。",driver,calm,4.0,eva_rt08_commute_eta_zh-CN.wav,"数字清晰，避免导航播报腔。",template
+rt09_fatigue_monitor,Fatigue Guard,"上高速了，路会有点长。我会陪着您，也会悄悄留意您的状态。",driver,caring,4.8,eva_rt09_fatigue_monitor_zh-CN.wav,"安静陪伴，不制造被监视感。",generate
+rt10_complex_rain,Complex Roads,"下雨了，我已经打开雨刷，也会把速度慢慢降下来。您安心看路。",driver,cautious,4.8,eva_rt10_complex_rain_zh-CN.wav,"镇定提醒，动词清楚。",generate
+rt11_oms_ready,OMS Runtime,"准备好了。这次我会同时照看您和右后座。您专心驾驶，其他变化我会及时告诉您。",driver,calm,5.2,eva_rt11_oms_ready_zh-CN.wav,"建立信任，不朗读技术边界。",generate
+rt12_command_drowsy,Voice Command,"好，我把风调大、温度调低，再换首精神一点的歌。要是还困，我们就去前面的服务区歇一会儿。",driver,caring,6.5,eva_rt12_command_drowsy_zh-CN.wav,"像自然回应请求，真诚但不说教。",generate
+rt13_temperature_down,Voice Command,"好的，温度已调低至 {temperature} 摄氏度。",driver,caring,3.0,eva_rt13_temperature_down_zh-CN.wav,"简短自然，数字清晰。",template
+rt14_temperature_up,Voice Command,"好的，温度已调高至 {temperature} 摄氏度。",driver,caring,3.0,eva_rt14_temperature_up_zh-CN.wav,"简短自然，数字清晰。",template
+rt15_music_off,Voice Command,"音乐已关闭。",driver,calm,1.5,eva_rt15_music_off_zh-CN.wav,"轻声确认。",generate
+rt16_music_switch,Voice Command,"好，换成{music_mode}。",driver,calm,2.0,eva_rt16_music_switch_zh-CN.wav,"自然确认，不读列表。",template
+rt17_massage,Voice Command,"好，座椅按摩{on_or_off}。",driver,caring,2.2,eva_rt17_massage_zh-CN.wav,"自然确认。",template
+rt18_navigation_eta,Voice Command,"剩余 {distance} 公里，按当前速度预计约 {minutes} 分钟到达。",driver,calm,4.2,eva_rt18_navigation_eta_zh-CN.wav,"数字清晰，不要导航腔。",template
+rt19_navigation_arrived,Voice Command,"已经接近目的地。",driver,confirming,1.8,eva_rt19_navigation_arrived_zh-CN.wav,"轻松确认。",generate
+rt20_rest_command,Voice Command,"好的。前方八公里有服务区，我现在为您启动休息模式。",driver,caring,4.2,eva_rt20_rest_command_zh-CN.wav,"给人可以依靠的感觉。",generate
+rt21_unknown_command,Voice Command,"这个我还没学会。不过温度、音乐、按摩、导航、休息建议和辅助驾驶，都可以交给我。",driver,calm,6.0,eva_rt21_unknown_command_zh-CN.wav,"坦诚但不机械，后半句轻松。",generate
+rt22_l2_on,L2,"L2 辅助驾驶已开启。我会帮您稳住车速和车道，但您仍要看好道路，随时准备接管。",driver,cautious,6.0,eva_rt22_l2_on_zh-CN.wav,"责任边界清楚，语气镇定。",generate
+rt23_l2_fatigue_warning,L2,"您已经有些疲倦了。辅助驾驶不能替您休息，觉得撑不住时，我们就去服务区停一停。",driver,caring,6.2,eva_rt23_l2_fatigue_warning_zh-CN.wav,"关怀但不说教，强调辅助不能替代休息。",generate
+rt24_l2_off,L2,"已经切回人工驾驶。我会留在副驾，继续和您一起看好这段路。",driver,calm,4.5,eva_rt24_l2_off_zh-CN.wav,"平稳确认，不制造失去保护的焦虑。",generate
+rt25_rest_accept,Fatigue Choice,"前方八公里有服务区，我已经选好了。灯光和座椅也会慢慢放松下来。",driver,caring,5.0,eva_rt25_rest_accept_zh-CN.wav,"明显放松，语速稍慢。",generate
+rt26_rest_hold,Fatigue Choice,"明白。{minutes} 分钟后如果您还是很累，我会再提醒您。先让车里透透气。",driver,caring,5.0,eva_rt26_rest_hold_zh-CN.wav,"尊重驾驶员选择，同时保留关心。",template
+rt27_memory_location,Cabin Memory,"在找{item}吗？我记得它在{location}。我帮您开灯，请继续看好前方。",driver,caring,5.0,eva_rt27_memory_location_zh-CN.wav,"像自然想起位置，方位词说清楚。",template
+rt28_memory_verified,Cabin Memory,"您已经看回前方，我也把阅读灯关好了。辅助驾驶还在工作，请继续看好道路。",driver,confirming,5.2,eva_rt28_memory_verified_zh-CN.wav,"先轻松确认，再稳妥提醒责任。",generate
+rt29_exit_reminder,Cabin Memory,"离车前提醒您一下：{important_items}。其他普通物品我就不打扰您了。",driver,caring,4.8,eva_rt29_exit_reminder_zh-CN.wav,"像贴心提醒，不读成清单警报。",template
+rt30_exit_clear,Cabin Memory,"检查好了，没有重要物品落在车里。",driver,confirming,2.5,eva_rt30_exit_clear_zh-CN.wav,"轻松、简短。",generate
+rt31_distraction_urgent,Distraction Guard,"您已经有四秒没有看前方了。请马上看回道路，我正在帮您减速并拉开跟车距离。",driver,urgent,5.8,eva_rt31_distraction_urgent_zh-CN.wav,"坚定但不喊叫，动作优先。",generate
+rt32_emotion_sad,Emotion,"您看起来有些低落。我把灯光调暖，也放上轻音乐。想聊一聊的时候，我一直都在。",driver,caring,6.0,eva_rt32_emotion_sad_zh-CN.wav,"真诚陪伴，不卖惨。",generate
+rt33_emotion_happy,Emotion,"您今天心情似乎很好，是不是遇到了什么开心的事？我很愿意听您分享。",driver,listening,5.5,eva_rt33_emotion_happy_zh-CN.wav,"有兴趣但不过分兴奋。",generate
+rt34_emotion_angry_traffic,Emotion,"拥堵确实容易让人烦躁。L2 正在维持安全跟车距离，您可以慢慢深呼吸，我也换成了更舒缓的音乐。",driver,caring,7.0,eva_rt34_emotion_angry_traffic_zh-CN.wav,"承认感受，慢慢带回稳定节奏。",generate
+rt35_emotion_angry,Emotion,"我感觉到您有些紧张。暖色灯光和舒缓音乐已经开启，先保证安全，我们一起慢慢来。",driver,caring,6.0,eva_rt35_emotion_angry_zh-CN.wav,"柔和、安定，不评判情绪。",generate
+rt36_emotion_drowsy,Emotion,"您看起来有些困倦。建议在下一个服务区短暂休息，我可以为您规划路线。",driver,caring,5.3,eva_rt36_emotion_drowsy_zh-CN.wav,"温和建议，不命令。",generate
+rt37_emotion_surprised,Emotion,"还好吗？我会和您一起留意前方道路。",driver,listening,2.8,eva_rt37_emotion_surprised_zh-CN.wav,"先关心人，再回到道路。",generate
+rt38_fatigue_urgent,Fatigue Guard,"您现在真的很疲倦，继续开下去不安全。我们尽快找地方休息，好吗？",driver,urgent,5.0,eva_rt38_fatigue_urgent_zh-CN.wav,"坚定又不失温度，结尾轻问。",generate
+rt39_fatigue_care,Fatigue Guard,"您眨眼变多了，眼睛也有些睁不开{perclos_value}。我把风调大、温度调低。别硬撑，前面歇一歇吧。",driver,caring,6.5,eva_rt39_fatigue_care_zh-CN.wav,"从观察自然过渡到照顾，不朗读算法。",template
+rt40_fatigue_recovered,Fatigue Guard,"您的状态好多了。别着急，等您觉得准备好了，我们再继续出发。",driver,confirming,4.5,eva_rt40_fatigue_recovered_zh-CN.wav,"风险解除后的放松和耐心。",generate
+rt41_complex_active,Complex Roads,"外面又下雨又堵，路不好走。我先把娱乐信息收起来，我们专心一点。",driver,cautious,4.8,eva_rt41_complex_active_zh-CN.wav,"注意力收紧，但不制造恐慌。",generate
+rt42_complex_clear,Complex Roads,"路况正在好转。音乐和座舱服务会慢慢恢复，不会突然打扰您。",driver,confirming,4.5,eva_rt42_complex_clear_zh-CN.wav,"随天气一起自然放松。",generate
+rt43_mood_low,Cabin Mood,"您好像有点低落。我把灯光调暖，也放上轻音乐。想聊的时候，我一直都在。",driver,caring,5.2,eva_rt43_mood_low_zh-CN.wav,"柔和陪伴，不对情绪下诊断。",generate
+rt44_mood_high,Cabin Mood,"您好像有点兴奋。我换了首平静些的歌，也调好了风，我们把节奏慢下来。",driver,caring,5.2,eva_rt44_mood_high_zh-CN.wav,"轻声带回稳定节奏。",generate
+ui01_paused,Interface,"我们先停在这里。准备好后，我会从这一刻继续。",driver,calm,3.5,eva_ui01_paused_zh-CN.wav,"安静说明暂停，不像报错。",generate
+ui02_full_ready,Interface,"准备好了。接下来五段路，我会一直陪着您。我们出发吧。",cabin,warm,4.0,eva_ui02_full_ready_zh-CN.wav,"作为正式演示开场，温暖且有期待感。",generate
+ui03_full_complete,Interface,"五个场景结束了。想再看哪一段，我都可以陪您重来。",cabin,confirming,4.0,eva_ui03_full_complete_zh-CN.wav,"收束后仍保持陪伴感。",generate
+ui04_oms_ready,Interface,"准备好了。这次我会同时照看您和右后座，陪您把这次风险处理好。",driver,calm,4.8,eva_ui04_oms_ready_zh-CN.wav,"可靠，不朗读技术边界。",generate
+ui05_oms_complete,Interface,"好了，这次风险已经安全结束。刚才每一步，也都已经记好了。",cabin,confirming,4.0,eva_ui05_oms_complete_zh-CN.wav,"放松、简洁地结束。",generate

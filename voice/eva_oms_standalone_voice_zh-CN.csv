@@ -1,0 +1,10 @@
+voice_id,scene,spoken_text,audience,tone,target_duration_sec,file_name,performance_direction,status
+oms01_ready,OMS Standalone,"准备好了。这次我会同时照看您和右后座。请您专心驾驶，其他变化我会及时告诉您。",driver,calm,5.2,eva_oms01_ready_zh-CN.wav,"镇定建立信任，不读成产品介绍。",secondary
+oms02_detect,OMS Standalone,"右后座有人正靠近车窗，我先看着。",driver,cautious,2.2,eva_oms02_detect_zh-CN.wav,"只陈述观察，不提前制造危险感。",secondary
+oms03_prompt,OMS Standalone,"请确认一下右后座，同时继续看好前方。",driver,cautious,3.2,eva_oms03_prompt_zh-CN.wav,"清楚提醒，强调前方仍需监督。",secondary
+oms04_correlate,OMS Standalone,"您也朝右后方看了一眼。我知道您不是走神，而是在回应后排的情况。",driver,thinking,4.6,eva_oms04_correlate_zh-CN.wav,"像理解驾驶员意图，关键词前留极短停顿。",secondary
+oms06_urgent,OMS Standalone,"右后座乘员，请您马上回到车内。驾驶员请看好前方，我正在协助平稳降速。",rear-right,urgent,4.2,eva_oms06_urgent_zh-CN.wav,"先对右后乘员坚定提醒，再安定驾驶员；不喊叫。",secondary
+oms07_clear,OMS Standalone,"乘员已经回到车内了。现在我再确认一下，您的视线是不是也回到了前方。",driver,caring,4.5,eva_oms07_clear_zh-CN.wav,"第一句放松，第二句仍保持谨慎。",secondary
+oms08_verify,OMS Standalone,"很好，您已经重新看向前方。确认车内和道路安全后，我们再解除保护。",driver,confirming,3.8,eva_oms08_verify_zh-CN.wav,"带轻微笑意，但保留确认责任。",secondary
+oms09_artifact,OMS Standalone,"刚才发生了什么、为什么这样处理，我都记好了。之后每一步都可以回看。",cabin,confirming,4.6,eva_oms09_artifact_zh-CN.wav,"沉着收束，不做广告式强调。",secondary
+oms10_complete,OMS Standalone,"好了，这次风险已经安全结束。",cabin,confirming,2.4,eva_oms10_complete_zh-CN.wav,"明显放松，简短落稳。",secondary

@@ -1,0 +1,61 @@
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.local
+*.key
+*.pem
+*.p12
+*.pfx
+.npmrc
+.pypirc
+credentials*.json
+secrets*.json
+
+# Dependencies and local runtimes
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Build, test, and tool output
+dist/
+build/
+coverage/
+.vite/
+.cache/
+tmp/
+temp/
+artifacts/
+feature-recordings/
+.qa/
+*.log
+
+# Generated self-hosted MediaPipe runtime (postinstall)
+public/mediapipe-wasm/
+
+# Local research and machine notes (not submission code)
+legacy/
+.agents/
+.codex/
+.codex_tmp/
+.learnings/
+环境安装.txt
+
+# Local-only materials, archives, and debug output (not part of the public repo)
+G-SPark2026_报名材料/
+_internal/
+landing-archive/
+.tmp-*
+.tmp*/
+*.tmp
+*.zip
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

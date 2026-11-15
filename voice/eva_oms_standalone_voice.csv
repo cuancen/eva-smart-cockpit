@@ -1,0 +1,10 @@
+voice_id,file_name,start_sec,tone,max_duration_sec,spoken_text
+oms01_ready,eva_oms01_ready.wav,0.5,calm,5.2,"Moment Trace is ready. D M S stays local, O M S is simulated, and you remain in charge."
+oms02_detect,eva_oms02_detect.wav,4,cautious,1.7,"Rear-right movement detected."
+oms03_prompt,eva_oms03_prompt.wav,6,cautious,3.5,"Check the rear-right seat, while keeping the road supervised."
+oms04_correlate,eva_oms04_correlate.wav,10,cautious,4.1,"Your glance matches the rear-right event, while fatigue evidence stays normal."
+oms06_urgent,eva_oms06_urgent.wav,15,urgent,3.8,"Rear-right passenger, move fully inside. I am reducing speed."
+oms07_clear,eva_oms07_clear.wav,23,caring,3.8,"Passenger inside. I am checking that your attention is forward."
+oms08_verify,eva_oms08_verify.wav,29,confirming,3.4,"Eyes forward. Please confirm that the cabin is safe."
+oms09_artifact,eva_oms09_artifact.wav,32,confirming,3.8,"Closed loop recorded, with every source clearly identified."
+oms10_complete,eva_oms10_complete.wav,35,confirming,1.8,"Moment Trace complete."

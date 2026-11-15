@@ -1,0 +1,10 @@
+﻿voice_id,scene,spoken_text,audience,tone,target_duration_sec,file_name,performance_direction,status
+oms01_ready,OMS Standalone,Ready. Watching you and the passenger at rear right; focus on driving.,driver,calm,5.2,eva_oms01_ready_en-US.mp3,"Relaxed, steady, and reassuring; speak to one person, not an audience.",secondary
+oms02_detect,OMS Standalone,Rear passenger by right window.,driver,cautious,2.2,eva_oms02_detect_en-US.mp3,"Alert and slightly quicker, but controlled; state the fact clearly without creating panic.",secondary
+oms03_prompt,OMS Standalone,"Check rear right, but keep your eyes on the road.",driver,cautious,3.2,eva_oms03_prompt_en-US.mp3,"Alert and slightly quicker, but controlled; state the fact clearly without creating panic.",secondary
+oms04_correlate,OMS Standalone,"You glanced rear right. I know you were responding to the passenger, not distracted.",driver,thinking,4.6,eva_oms04_correlate_en-US.mp3,"Sound observant, then certain; use a tiny pause before the conclusion.",secondary
+oms06_urgent,OMS Standalone,"Rear-right passenger inside; driver, eyes ahead, slowing.",rear-right,urgent,4.2,eva_oms06_urgent_en-US.mp3,"Firm, direct, and about ten percent faster; lead with the person and action, never shout.",secondary
+oms07_clear,OMS Standalone,Passenger back inside. Let's confirm your eyes are on the road.,driver,caring,4.5,eva_oms07_clear_en-US.mp3,"Gentle and sincere, focused on the person and the next step; never preachy.",secondary
+oms08_verify,OMS Standalone,"Eyes forward. Once clear, we'll lift protection.",driver,confirming,3.8,eva_oms08_verify_en-US.mp3,Let subtle relief and a light smile come through; finish steadily.,secondary
+oms09_artifact,OMS Standalone,I've recorded what happened and why. You can review every step later.,cabin,confirming,4.6,eva_oms09_artifact_en-US.mp3,Let subtle relief and a light smile come through; finish steadily.,secondary
+oms10_complete,OMS Standalone,All clear. Risk ended safely.,cabin,confirming,2.4,eva_oms10_complete_en-US.mp3,Let subtle relief and a light smile come through; finish steadily.,secondary
