@@ -94,7 +94,7 @@ src/shell/    Cockpit UI, pausable timeline, Evidence and digital-twin stage
 src/landing/  Chinese-first bilingual landing page with the 3D hero vehicle
 tests/        Core, vision, OMS, timeline, audio and interaction regressions
 public/       Self-hosted face model, vehicle GLB and approved EVA assets
-docs/         Pipeline, decisions, feature guide and the KT board
+docs/         Feature guide and the KT board
 ```
 
 The simulation clock advances only while the experience is `running`; ready, paused, Evidence-open and completed states freeze. The high-poly vehicle renders at a capped rate only while motion is required. If WebGL or the GLB fails, the story, evidence, audio and controls continue through the EVA status fallback.
@@ -113,22 +113,9 @@ npm test      # 5 test files, 111 tests passing
 npm run build # tsc --noEmit + vite build
 ```
 
-## Competition records
-
-- [Decision log](docs/DECISIONS.md)
-- [AI usage disclosure](AI_USAGE.md)
-- [Third-party notices](THIRD_PARTY_NOTICES.md)
-- [Pipeline and parameters](docs/PIPELINE.md)
-- [Project guide](PROJECT_GUIDE_EN.md)
-
-## Related repositories
-
-- **Previous HHCC 2026 repository**: [cuancen/hhcc2026-proto-intelligent-vision](https://github.com/cuancen/hhcc2026-proto-intelligent-vision)
-- **Team staging mirror**: [b1207739631-rgb/hhcc-2026-prototype](https://github.com/b1207739631-rgb/hhcc-2026-prototype)
-
 ## Disclaimers
 
 - Speeds, fatigue rates, temperatures and similar values in the demo are **simulated assumptions** defined in `src/core/params.ts`, not production calibration.
 - The MediaPipe Face Landmarker model and runtime are Apache-2.0 and self-hosted.
-- The vehicle model is a community-made Sketchfab model by *crivero* (CC-BY, attributed in `AI_USAGE.md` and the page footer), **not an official Geely asset**; its material is rendered as graphite metal at runtime.
+- The vehicle model is a community-made Sketchfab model by *crivero* (CC-BY, attributed in the page footer), **not an official Geely asset**; its material is rendered as graphite metal at runtime.
 - This repository contains no credentials, personal data, dependency directories, generated builds or research-workspace artifacts.

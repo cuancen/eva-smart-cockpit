@@ -94,7 +94,7 @@ src/shell/    座舱 UI、可暂停时间线、Evidence 与数字孪生舞台
 src/landing/  中文优先的中英双语首页与 3D 车辆 Hero
 tests/        Core、vision、OMS、时间线、音频与交互回归测试
 public/       自托管的人脸模型、车辆 GLB 与授权的 EVA 素材
-docs/         Pipeline、决策记录、功能说明与 KT 展板
+docs/         功能说明与 KT 展板
 ```
 
 仿真时钟只在体验 `running` 时前进；Ready、暂停、Evidence 展开和完成状态都会冻结。高面数车辆只在需要运动时按上限渲染。WebGL 或 GLB 加载失败时，故事、证据、音频和控制仍可通过 EVA 状态回退继续。
@@ -113,22 +113,9 @@ npm test      # 5 个测试文件，111 项全部通过
 npm run build # tsc --noEmit + vite build
 ```
 
-## 竞赛资料
-
-- [决策记录](docs/DECISIONS.md)
-- [AI 使用声明](AI_USAGE.md)
-- [第三方声明](THIRD_PARTY_NOTICES.md)
-- [管线与参数表](docs/PIPELINE.md)
-- [项目指南（英文）](PROJECT_GUIDE_EN.md)
-
-## 相关仓库
-
-- **上一届 HHCC 2026 仓库**：[cuancen/hhcc2026-proto-intelligent-vision](https://github.com/cuancen/hhcc2026-proto-intelligent-vision)
-- **团队暂存镜像**：[b1207739631-rgb/hhcc-2026-prototype](https://github.com/b1207739631-rgb/hhcc-2026-prototype)
-
 ## 声明
 
 - 演示中的速度、疲劳速率、温度等均为**模拟假设**，集中定义在 `src/core/params.ts`，不是量产标定。
 - MediaPipe Face Landmarker 模型与运行时为 Apache-2.0，自托管。
-- 车辆模型为社区作者 *crivero* 的 Sketchfab 作品（CC-BY，署名见 `AI_USAGE.md` 与页面页脚），**不是吉利官方素材**；材质在运行时渲染为石墨金属。
+- 车辆模型为社区作者 *crivero* 的 Sketchfab 作品（CC-BY，署名见页面页脚），**不是吉利官方素材**；材质在运行时渲染为石墨金属。
 - 本仓库不包含凭据、个人数据、依赖目录、构建产物或研究工作区文件。
