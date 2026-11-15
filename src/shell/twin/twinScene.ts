@@ -799,12 +799,21 @@ export async function mountTwinScene(
   const cameraBasePosition = camera.position.clone();
   const cameraBaseTarget = lookTarget.clone();
 
+  // 竖屏时保持横屏的水平视野：直接沿用横屏 FOV 会把车头和座舱裁掉。
+  const fitFov = (base: number) => {
+    const aspect = camera.aspect;
+    if (!Number.isFinite(aspect) || aspect >= 1) return base;
+    return Math.min(78, base * Math.min(1.9, 1 / Math.max(aspect, 0.45)));
+  };
+
   const resize = () => {
     const width = Math.max(1, canvas.clientWidth);
     const height = Math.max(1, canvas.clientHeight);
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    // 旋转屏幕后重新按新纵横比计算取景，而不是沿用旧的 FOV。
+    applyFrame(frame, true);
     schedule();
   };
   const resizeObserver = new ResizeObserver(resize);
@@ -856,11 +865,13 @@ export async function mountTwinScene(
     desiredPosition.copy(desiredTarget).add(basePosition.sub(desiredTarget).multiplyScalar(boom));
     if (roadView) desiredPosition.y += next.motionIntensity * 0.08;
     const occupantFocus = next.camera === 'rearRightReveal' || next.camera === 'rearRightFocus';
-    desiredFov = occupantFocus
-      ? (compact ? 38 : 31) + next.motionIntensity * 2.5
-      : roadView
-        ? (compact ? 43 : 35) + next.motionIntensity * 8
-        : (compact ? 39 : 31);
+    desiredFov = fitFov(
+      occupantFocus
+        ? (compact ? 38 : 31) + next.motionIntensity * 2.5
+        : roadView
+          ? (compact ? 43 : 35) + next.motionIntensity * 8
+          : (compact ? 39 : 31),
+    );
     floor.visible = !roadView;
     stageRings.forEach((ring) => { ring.visible = next.cabinEffect === 'rest'; });
     drivingWorld.group.visible = roadView;

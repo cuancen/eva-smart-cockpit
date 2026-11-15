@@ -2235,3 +2235,154 @@ body.high-contrast {
 @media (prefers-reduced-motion: reduce) {
   .cinema-language *, .evidence-drawer *, .evidence-backdrop { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* --------------------------------------------------------------------------
+   Mobile pass: compact evidence cards and short-landscape controls
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  .twin-boundary {
+    top: 72px;
+    left: 12px;
+    gap: 5px;
+    font-size: 0.5rem;
+  }
+  .twin-boundary span:last-child { padding-left: 16px; }
+
+  .cabin-effect-overlay,
+  .cabin-memory-lens,
+  .dms-evidence-lens {
+    top: 96px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-height: min(32vh, 276px);
+    overflow: auto;
+    padding: 9px 11px;
+    border: 1px solid rgba(94, 234, 212, 0.22);
+    border-left-color: rgba(140, 108, 242, 0.55);
+    border-radius: 10px;
+    background: rgba(7, 10, 15, 0.94);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(14px);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dms-evidence-lens { padding-left: 11px; }
+  .dms-lens-heading { padding-block: 0 6px; }
+  .dms-lens-body { grid-template-columns: minmax(0, 1fr) 78px; gap: 10px; padding-bottom: 4px; }
+  .dms-lens-visual { width: 78px; }
+  .dms-signal-flow { display: none; }
+  .dms-evidence-lens dl { grid-template-columns: 1fr 1fr; gap: 0 10px; }
+  .dms-evidence-lens dl div { min-height: 26px; padding-block: 3px; }
+  .dms-evidence-lens dl div:nth-child(n + 5) { display: none; }
+  .dms-lens-source { padding-block: 5px 2px; }
+
+  .cabin-effect-route { display: none; }
+  .cabin-effect-values { margin-top: 6px; gap: 10px; }
+  .cabin-effect-values div { padding-block: 6px 4px; }
+  .cabin-effect-overlay footer { margin-top: 6px; }
+
+  .cabin-memory-lens::after { display: none; }
+  .cabin-memory-lens dl { display: none; }
+  .memory-object-row { margin-top: 6px; padding: 6px 0; }
+  .memory-data-flow { margin: 6px 0 2px; }
+  .cabin-memory-lens footer { margin-top: 4px; }
+
+  /* When a cabin card and DMS evidence are on screen together, stack them. */
+  body:has(.cabin-effect-overlay[data-visible="true"]) .dms-evidence-lens,
+  body:has(.cabin-memory-lens[data-visible="true"]) .dms-evidence-lens {
+    top: 218px;
+    max-height: min(28vh, 236px);
+  }
+
+  .cinema-story-layer { bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+
+@media (max-height: 520px) and (min-aspect-ratio: 1/1) {
+  .cinema-header { height: 58px; }
+  .twin-boundary { top: 64px; font-size: 0.48rem; gap: 4px; }
+  .twin-boundary span:last-child { padding-left: 14px; }
+
+  .cabin-effect-overlay,
+  .cabin-memory-lens,
+  .dms-evidence-lens {
+    top: 82px;
+    max-height: 128px;
+    overflow: auto;
+    padding: 7px 9px;
+    border: 1px solid rgba(94, 234, 212, 0.2);
+    border-radius: 8px;
+    background: rgba(7, 10, 15, 0.93);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+  }
+
+  .cabin-effect-overlay {
+    left: 8px;
+    right: auto;
+    width: min(250px, 38vw);
+    border-left: 1px solid rgba(140, 108, 242, 0.55);
+  }
+  .dms-evidence-lens {
+    right: 8px;
+    left: auto;
+    width: min(380px, 56vw);
+    border-right: 1px solid rgba(140, 108, 242, 0.55);
+  }
+  .cabin-memory-lens {
+    right: 8px;
+    left: auto;
+    width: min(340px, 52vw);
+    border-right: 1px solid rgba(255, 122, 61, 0.55);
+  }
+
+  /* Override the portrait stacking rule: in short landscape the cards sit side by side. */
+  body:has(.cabin-effect-overlay[data-visible="true"]) .dms-evidence-lens {
+    top: 82px;
+  }
+
+  .dms-lens-heading { padding-block: 0 4px; }
+  .dms-lens-heading output { display: none; }
+  .dms-lens-body { grid-template-columns: minmax(0, 1fr) 58px; gap: 7px; padding-bottom: 3px; }
+  .dms-lens-visual { width: 58px; }
+  .dms-signal-flow { display: none; }
+  .dms-evidence-lens dl { grid-template-columns: 1fr 1fr; gap: 0 8px; }
+  .dms-evidence-lens dl div { min-height: 21px; padding-block: 2px; }
+  .dms-evidence-lens dl div:nth-child(n + 5) { display: none; }
+  .dms-lens-source { padding-block: 3px 1px; font-size: 0.42rem; }
+
+  .cabin-effect-route { display: none; }
+  .cabin-effect-values { margin-top: 4px; gap: 8px; }
+  .cabin-effect-values div { padding-block: 4px 2px; }
+  .cabin-effect-overlay footer { display: none; }
+
+  .cabin-memory-lens::after { display: none; }
+  .cabin-memory-lens dl { display: none; }
+  .memory-object-row { margin-top: 4px; padding: 4px 0; grid-template-columns: 36px 1fr auto; gap: 8px; }
+  .memory-object-glyph { width: 32px; height: 22px; }
+  .memory-data-flow { margin: 4px 0 0; }
+  .cabin-memory-lens footer { margin-top: 3px; }
+
+  /* The memory trace and DMS card would collide on the right; keep the trace. */
+  body:has(.cabin-memory-lens[data-visible="true"]) .dms-evidence-lens { display: none; }
+
+  .story-rail { display: none; }
+  .cinema-story-layer {
+    bottom: max(8px, env(safe-area-inset-bottom));
+    gap: 6px 14px;
+  }
+  .eva-narration { min-height: 52px; padding-block: 6px; }
+  .eva-narration p { font-size: 0.74rem; line-height: 1.35; -webkit-line-clamp: 2; }
+  .cinema-primary { height: 40px; }
+  .cinema-controls > .cinema-icon-button { width: 40px; height: 40px; }
+  .scenario-select { min-height: 32px; }
+}
+
+/* Very short landscape phones: the stage and story layer need the room more than
+   the floating evidence cards; the full evidence remains in the drawer. */
+@media (max-height: 360px) and (min-aspect-ratio: 1/1) {
+  .dms-evidence-lens { display: none; }
+  .cabin-effect-overlay,
+  .cabin-memory-lens { max-height: 74px; }
+}

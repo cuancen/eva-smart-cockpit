@@ -804,3 +804,31 @@ body.landing-body { background: var(--la-bg); }
   .la-evidence-flow > i { justify-self: start; transform: rotate(90deg); margin-left: 7px; }
   .la-evidence-board-foot { font-size: 0.47rem; }
 }
+
+/* Phone pass: keep the hero labels inside the viewport and shorten the stage. */
+@media (max-width: 767px) {
+  .la-nav { width: calc(100% - 16px); }
+  .la-hero { padding: 22px 16px 44px; }
+  .la-hero-visual { min-height: 270px; }
+  .car-model { height: 270px; }
+  .la-visual-topline,
+  .la-visual-caption {
+    left: 0;
+    right: 0;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    font-size: 0.44rem;
+  }
+  .la-visual-caption { justify-content: flex-start; }
+  .la-visual-caption span:first-child { display: none; }
+  .la-hud--top { display: none; }
+  .la-hero-visual-hint { display: none; }
+  .la-hero-metrics { margin-top: 26px; max-width: none; }
+  .la-hero-metrics > div { padding-right: 8px; }
+  .la-hero-metrics > div + div { padding-left: 8px; }
+  .la-hero-metrics small { letter-spacing: 0.03em; }
+  .la-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .la-btn { min-height: 46px; padding-inline: 10px; font-size: 0.72rem; }
+  /* 手机端不要 sticky，但必须保留定位上下文，否则内部截图会以视口为参照盖住首屏。 */
+  .la-evidence-board { position: relative; top: auto; }
+}
