@@ -870,13 +870,6 @@ body.landing-body { background: var(--la-bg); }
 }
 
 .la-hero-copy { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35); }
-.la-title em {
-  background-image: linear-gradient(100deg, #fff 0%, #e9e7f0 32%, var(--la-accent) 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 8px 26px rgba(94, 234, 212, 0.12));
-}
 .la-slogan { color: var(--la-soft); }
 .la-kicker { background: rgba(255, 122, 61, 0.1); }
 
