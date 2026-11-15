@@ -915,3 +915,18 @@ body.landing-body { background: var(--la-bg); }
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent);
   border-top-color: rgba(255, 255, 255, 0.08);
 }
+
+/* 标题字体与渐变对齐上一版（5175）：只影响 .la-title，其余样式不动。 */
+.la-title {
+  font-size: clamp(2.3rem, 5.2vw, 3.9rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+.la-title > span { color: #fff; }
+.la-title em {
+  background-image: linear-gradient(100deg, #fff 4%, #c8c6d0 42%, var(--la-accent) 108%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
